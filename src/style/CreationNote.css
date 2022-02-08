@@ -1,0 +1,25 @@
+.cardCreation{
+    width: 40vw;
+    height:45vh;
+    margin-top: 20vh;
+    margin-left: 5vw;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btnEnregistrer-annuler{
+    display: inline;
+}
+
+.Enregistrer-annuler{
+    width: 45%;
+    margin-left: 3%;
+    margin-top: 5%;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 255, .4);
+}
+
+#entreeNote{
+    height: 20vh;
+    width: 96%;
+    margin-right: auto;
+    margin-left: auto;
+}

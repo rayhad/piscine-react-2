@@ -1,0 +1,15 @@
+.search{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.search input{
+    border: none;
+    background-color: white;
+}
+
+.search input:focus{
+    outline: none;
+}

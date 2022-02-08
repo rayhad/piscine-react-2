@@ -1,0 +1,26 @@
+.card-stat{
+    background-color: white;
+    width: 80%;
+    height: 10%;
+    margin-bottom: 40px;
+}
+
+.titre{
+    text-align: center;
+}
+
+.buttonStatistique{
+    width: 80%;
+    background-color: rgba(0, 0, 255,0.9);
+    color: white;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+    font-size: small;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.buttonStatistique:hover{
+    background-color: rgb(82, 77, 218);
+    color: white;
+}
+

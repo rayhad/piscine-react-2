@@ -1,0 +1,87 @@
+.ListContainer{
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    width: 95%;
+    height: 80vh;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.5);
+    
+}
+
+.ListButton{
+    height: 18vh;
+    width: 36vw;
+    margin-top: 20vh;
+    margin-left: 5vh;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.5);
+    transform: translate(0, -8em);
+}
+
+.tabContainer{
+    max-width: none;
+}
+
+.ListTitle{
+    margin-top: 2.5vh;
+    text-align: center;
+}
+
+.ListPrecedent{
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 100%;
+    font-size: 1em;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.ListSwitch{
+    background-color: white;
+    /*margin-left: 50%;*/
+    margin-left: 100%;
+    margin-top: 6vh;
+    width: 8vw;
+    border-radius: 5%;
+    transform: translate(760px);
+}
+
+.navbarnavbar-light{
+    width: 40vw;
+    height: 10%;
+    margin-top: 6vh;
+    transform: translate( 170px);
+}
+
+.crudStuff{
+    padding: 5px;
+    background-color: white;
+    border-radius: 7px;
+    margin-top: 4vh;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    height: 60vh;
+}
+
+.Cards-Liste{
+    margin: 0;
+    width: 25vw;
+}
+
+.NavList{
+    width: 100%;
+    height: 10vh;
+}
+
+#afficher-note{
+    width: 10vw;
+}
+
+#btnSwitch-Liste{
+    margin-top: 0.5em;
+    margin-right: 1em;
+    width: 2.75em;
+    height: 1.5em;
+}
