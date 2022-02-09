@@ -52,13 +52,7 @@ export default function ModifCarnet(){
     return (
         <div>
         <div className='cardContainer'>
-            <Card className='cardButton'>
-                <Card.Body>
-                    <Card.Title id="creationTitle">Création d'une note</Card.Title>
-                    <Button className="btnCreation1">Prévisualiser</Button>
-                    <Button as={Link} to={'../ListeCarnet'} className="btnCreation1">Précédent</Button>
-                </Card.Body>
-            </Card>
+            
 
             <Card className='cardCreation' >
             <Form onSubmit={e => edit(e)}>
@@ -81,16 +75,16 @@ export default function ModifCarnet(){
                         setcarnetEdit(tmp)
                     }}
                     required>
-                        <option>Sélectionnez une catégorie</option>
-                        <option value="1">Catégorie 1</option>
-                        <option value="2">Catégorie 2</option>
-                        <option value="3">Catégorie 3</option>
+                            <option value="null">Sélectionnez une catégorie</option>
+                            <option value="Div">Divertissement</option>
+                            <option value="Pro">Professionnel</option>
+                            <option value="Vie-Qutd">Vie Quotidienne</option>
                     </Form.Select>
                     </Form.Group>
                 </Card.Body>
                     <br></br>
                     <Button variant="success" type="submit" className="Enregistrer-annuler">Modifier et Enregistrer</Button>
-                    <Button className="Enregistrer-annuler">Annuler la modification</Button>
+                    <Button className="Enregistrer-annuler" as={Link} to={'../ListeCarnet'}>Annuler la modification</Button>
                 </Form>
             </Card>
         </div>

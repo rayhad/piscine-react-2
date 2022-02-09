@@ -1,9 +1,10 @@
 .cardCreation{
     width: 40vw;
-    height:45vh;
+    height:40vh;
     margin-top: 20vh;
-    margin-left: 5vw;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 .btnEnregistrer-annuler{
@@ -13,7 +14,6 @@
 .Enregistrer-annuler{
     width: 45%;
     margin-left: 3%;
-    margin-top: 5%;
     box-shadow: 7px 7px 2px 1px rgba(0, 0, 255, .4);
 }
 

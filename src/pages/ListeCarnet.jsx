@@ -1,11 +1,16 @@
 import {Container, Row, Col, Button, Table, Card, Form, Nav, Navbar, NavDropdown, FormControl } from 'react-bootstrap'
 import {Link, useParams} from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import Search from './Search'
 //import '../style/Liste.css'
+
+
 export default function Liste (){
     const {id} = useParams()
     const [carnets, setCarnets] = useState([])
     const [isSwitchOn, setIsSwitchOn] = useState({})
+    const [notesSearch, setNotesSearch] = useState([])
+    const [searchText, setSearchText] = useState('');
     
     useEffect(() =>{
         let datas = localStorage.getItem('Piscine-Carnet')
@@ -14,6 +19,14 @@ export default function Liste (){
         datas = JSON.parse(datas)
         setCarnets(datas)
     }, [])
+
+    useEffect(()=>{
+      if(searchText.length == 0){
+        setNotesSearch(carnets)
+        
+      }
+  },[searchText])
+
 
     function remove(carnet, i){
         let rep = window.confirm(
@@ -36,8 +49,8 @@ export default function Liste (){
               <li><b>Titre : </b>{carnet.titre}</li>
               <li><b>Catégorie : </b>{carnet.categorie}</li>
               <td>
-                  <Button>Observer</Button>
-                </td>
+                  <Button as={Link} to={'../ListeCarnetNote/' + carnet.id}>Observer</Button>
+              </td>
               <td>
                   <Button as={Link} to={'../ModifCarnet/' + carnet.id} variant="warning">Modifier</Button>
               </td>
@@ -98,13 +111,8 @@ export default function Liste (){
         navbarScroll
       >
 
-    <Nav.Link href="#action1">Home</Nav.Link>
-        <NavDropdown title="Link" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-        </NavDropdown>
+    
+        
       </Nav>
 
       <p style={{
@@ -127,15 +135,8 @@ export default function Liste (){
           id='btnSwitch-Liste'
           checked={isSwitchOn}
         />
-        
-        
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button style={{marginRight:'1vw'}} variant="outline-success">Search</Button>
+
+        <Search handleSearchNote={setSearchText}/>
         
       </Form>
     </Navbar.Collapse>
@@ -193,13 +194,7 @@ export default function Liste (){
         navbarScroll
       >
 
-    <Nav.Link href="#action1">Home</Nav.Link>
-        <NavDropdown title="Link" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-        </NavDropdown>
+
       </Nav>
 
       <p style={{
@@ -230,7 +225,7 @@ export default function Liste (){
           className="me-2"
           aria-label="Search"
         />
-        <Button style={{marginRight:'1vw'}} variant="outline-success">Search</Button>
+
         
       </Form>
     </Navbar.Collapse>

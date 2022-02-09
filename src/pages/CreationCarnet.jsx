@@ -32,14 +32,7 @@ export default function CreationCarnet(){
     return(
         <div>
             <div className='cardContainer'>
-                <Card className='cardButton'>
-                    <Card.Body>
-                        <Card.Title id="creationTitle">Création d'un carnet</Card.Title>
-                        <Button className="btnCreation1">Prévisualiser</Button>
-                        <Button as={Link} to={'../CarnetdeNote'} className='btnCreation1'>Précedent</Button>
-                    </Card.Body>
-                </Card>
-
+                
                 <Card className='cardCreation'>
                     <Form onSubmit={e => add(e)}>
                         <Card.Body>
@@ -60,9 +53,9 @@ export default function CreationCarnet(){
                         }}
                         required>
                             <option value="null">Sélectionnez une catégorie</option>
-                            <option value="1">Catégorie 1</option>
-                            <option value="2">Catégorie 2</option>
-                            <option value="3">Catégorie 3</option>
+                            <option value="Div">Divertissement</option>
+                            <option value="Pro">Professionnel</option>
+                            <option value="Vie-Qutd">Vie Quotidienne</option>
                         </Form.Select>
                         </Form.Group>
                         </Card.Body>

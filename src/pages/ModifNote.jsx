@@ -52,13 +52,6 @@ export default function ModifNote(){
     return (
         <div>
         <div className='cardContainer'>
-            <Card className='cardButton'>
-                <Card.Body>
-                    <Card.Title id="creationTitle">Création d'une note</Card.Title>
-                    <Button as={Link} to={'../PreviNote'} className="btnCreation1">Prévisualiser</Button>
-                    <Button className="btnCreation1">Précédent</Button>
-                </Card.Body>
-            </Card>
 
             <Card className='cardCreation' >
             <Form onSubmit={e => edit(e)}>
